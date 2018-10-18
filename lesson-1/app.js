@@ -51,7 +51,8 @@ class Menu extends Container {
 		}
 	}
 	create(){
-		document.body.appendChild(this.render(this.id));
+		let container = document.querySelector('.container');
+		container.appendChild(this.render(this.id));
 	}
 	render(id){
 		let result = document.createElement('ul');
