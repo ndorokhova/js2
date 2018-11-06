@@ -1,4 +1,14 @@
-// Форма
+//  Задания 1 и 2
+
+let text = "'Isn't this game really cool' - he asked.\nShe said: 'Well, it's so hard and I can't pass the first level!'";
+let re = /'(?![a-z])/g;
+if (re.test(text)) {
+    text = text.replace(re, '"');
+}
+console.log(text);
+
+
+// Задание 3
 
 document.getElementById('btn').addEventListener('click', validateForm);
 
@@ -38,17 +48,3 @@ function validateItem(field, re) {
         field.classList.remove('is-invalid')
     }
 }
-
-$.ajax({
-    url: 'data.json',             
-    type : 'GET',
-    dataType : 'json',                     
-    success: function (data) {      
-        for (let i = 0; i<data.length; i++) {
-            $('#city').append('<option>' + data[i].city + '</option>');
-        }    	
-	},
-	error: function(){
-		console.log('Ошибка загрузки данных');
-	} 
-    });  
