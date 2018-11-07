@@ -19,7 +19,7 @@ class Cart {
 	}
 	onAdd(event){
 		let id = parseInt($(event.currentTarget).attr('data-id'));
-
+		
 		if (id) {
 			this.request(Api.add, 'id=' + id)
 		}
@@ -77,7 +77,7 @@ class Cart {
 					this.items = response.items;
 					break;
 				case Api.add:
-					this.addProduct(response.item);
+					this.addProduct(response.item);					
 					break;
 				case Api.remove:
 					this.removeProduct(response.id);
@@ -137,4 +137,15 @@ $(function() {
 	$('.name').draggable({
 		helper: 'clone'
 	});
-})
+
+	$('#cart').droppable({
+		accept: '.name',
+		drop: function(event, ui) {			
+			$(this).css('color', 'black')
+			$(ui.draggable.parent().find('.btn-add')).trigger('click');
+		},
+		over: function(event, ui) {
+			$(this).css('color', 'red')
+		}
+	});	
+});
