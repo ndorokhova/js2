@@ -132,3 +132,9 @@ class Cart {
 $(document).ready(function(){
 	window.cart = new Cart();
 });
+
+$(function() {
+	$('.name').draggable({
+		helper: 'clone'
+	});
+})
