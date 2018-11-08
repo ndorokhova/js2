@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JCarousel</title>
+
+    <style>
+        .wrapper {
+            margin: auto;
+            width: 1000px;
+            border: 10px solid black;
+            position: relative;
+        }
+
+        .jcarousel {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 300px;
+            margin: auto;
+        }
+
+        .jcarousel ul {
+            width: 10000em;
+            position: relative;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .jcarousel li {
+            float: left;
+        }
+
+        .jcarousel-prev, .jcarousel-next {
+            position: absolute;
+            top: 170px;    
+        }
+
+        .jcarousel-prev {
+            left: -70px;
+        }
+
+        .jcarousel-next {
+            left: 1020px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="jcarousel">
+            <ul>
+                <li><img src="img/1.jpg" alt="1 img"></li>
+                <li><img src="img/2.jpg" alt="2 img"></li>
+                <li><img src="img/3.jpg" alt="3 img"></li>
+                <li><img src="img/4.jpg" alt="4 img"></li>
+                <li><img src="img/5.jpg" alt="5 img"></li>
+                <li><img src="img/6.jpg" alt="6 img"></li>
+            </ul>
+        </div>
+
+        <a class="jcarousel-prev" href="#">Назад</a>
+        <a class="jcarousel-next" href="#">Вперед</a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="jquery.jcarousel.js"></script>
+
+    <script>
+        $(function () {
+
+            $('.jcarousel').jcarousel({
+                animation: "slow",                
+                wrap: 'circular'                
+            });
+
+            $('.jcarousel-prev').jcarouselControl({
+                target: '-=1'
+            });
+
+            $('.jcarousel-next').jcarouselControl({
+                target: '+=1'
+            });
+
+        });
+    </script>
+</body>
+</html>

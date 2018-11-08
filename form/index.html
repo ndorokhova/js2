@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    
+
+    <title>Форма</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <h1>Форма обратной связи</h1>
+                <form>
+                    <div class="form-group">
+                        <label>Имя</label>
+                        <input type="text" class="form-control" id="name" placeholder="Введите свое имя">
+                        <div class="invalid-feedback" title="Имя" id="diag-name">
+                            <p>Введите корректное имя</p>                            
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Дата рождения</label>
+                        <input type="text" class="form-control" id="date-of-birth" placeholder="Укажите вашу дату рождения">
+                        <div class="invalid-feedback" title="Дата рождения" id="diag-date-of-birth">
+                            <p>Пожалуйста, заполните поле</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="myCity">Город обращения</label>                                               
+                        <input type="text" id="myCity" class="form-control" placeholder="Укажите город обращения">
+                        <div class="invalid-feedback" title="Город обращения" id="diag-myCity">
+                            <p>Пожалуйста, заполните поле</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Телефон</label>
+                        <input type="text" class="form-control" id="phone" placeholder="Введите номер телефона в формате +7(000)000-0000">
+                        <div class="invalid-feedback" title="Телефон" id="diag-phone">
+                            <p>Введите номер телефона в формате +7(000)000-0000</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" class="form-control" id="email" placeholder="Введите свой email">
+                        <div class="invalid-feedback" title="Email" id="diag-email">
+                            <p>Введите корректный email</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Комментарий</label>
+                        <textarea class="form-control" id="text" rows="3"></textarea>
+                        <div class="invalid-feedback" title="Комментарий" id="diag-text">
+                            <p>Введите не более 200 символов</p>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="btn">Отправить</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>    
+<script src="app.js"></script>
+</body>
+
+</html>
